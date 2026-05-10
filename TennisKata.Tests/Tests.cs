@@ -64,4 +64,48 @@ public class Tests
         Assert.Equal("Deuce", result);
     }
 
+    [Fact]
+    public void Player1_has_advantage()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        var result = game.GetScore();
+        Assert.Equal("Player1 Advantage", result);
+    }
+
+    [Fact]
+    public void Three_Two_is_no_advantage()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        var result = game.GetScore();
+        Assert.Equal("Forty - Thirty", result);
+    }
+
+    [Fact]
+    public void Player1_wins()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        var result = game.GetScore();
+        Assert.Equal("Player1 Wins", result);
+    }
+
 }

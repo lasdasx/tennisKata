@@ -4,9 +4,27 @@ public class TennisGame
 {
     private int score1 = 0;
     private int score2 = 0;
+    private int winner = -1;
+    private int advantagePlayer = -1;
+
+    private bool deuce = false;
 
     public String GetScore()
     {
+        if (winner != -1)
+        {
+            return $"Player{winner} Wins";
+
+        }
+        if (advantagePlayer != -1)
+        {
+            return $"Player{advantagePlayer} Advantage";
+        }
+        if (deuce)
+        {
+            return "Deuce";
+        }
+
         Dictionary<int, string> pairs = new Dictionary<int, string>()
         {
 
@@ -14,35 +32,69 @@ public class TennisGame
             { 2, "Thirty" },
             { 3, "Forty" }
         };
-        if (score1 == score2 && (score1 == 0 || score1 >= 3))
+        if (score1 == score2 && (score1 == 0))
         {
 
-            if (score1 == 0)
-            {
-                return "Love All";
-            }
 
-            else
-            {
-                return "Deuce";
-            }
+            return "Love All";
+
+
 
         }
-        else
-        {
-            return $"{pairs.GetValueOrDefault(score1, "Love")} - {pairs.GetValueOrDefault(score2, "Love")}";
-        }
+
+        return $"{pairs.GetValueOrDefault(score1, "Love")} - {pairs.GetValueOrDefault(score2, "Love")}";
+
 
 
     }
 
     public void Player1Scores()
     {
+        if (deuce)
+        {
+            advantagePlayer = 1;
+            deuce = false;
+        }
+        else if (advantagePlayer == 1)
+        {
+            winner = 1;
+        }
+        else if (advantagePlayer == 2)
+        {
+            deuce = true;
+            advantagePlayer = -1;
+        }
+
+
         score1++;
+        if (score1 == score2 && score1 >= 3)
+        {
+            deuce = true;
+        }
+
+
     }
 
     public void Player2Scores()
     {
+        if (deuce)
+        {
+            advantagePlayer = 2;
+            deuce = false;
+        }
+        else if (advantagePlayer == 2)
+        {
+            winner = 2;
+        }
+        else if (advantagePlayer == 1)
+        {
+            deuce = true;
+            advantagePlayer = -1;
+        }
         score2++;
+        if (score1 == score2 && score1 >= 3)
+        {
+            deuce = true;
+        }
     }
 }

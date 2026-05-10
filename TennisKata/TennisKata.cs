@@ -47,6 +47,9 @@ public class TennisGame
 
     public void Player1Scores()
     {
+        if (winner != -1)
+            throw new InvalidOperationException("Game is already finished");
+
         if (deuce)
         {
             advantagePlayer = 1;
@@ -78,6 +81,11 @@ public class TennisGame
 
     public void Player2Scores()
     {
+
+        if (winner != -1)
+            throw new InvalidOperationException("Game is already finished");
+
+
         if (deuce)
         {
             advantagePlayer = 2;

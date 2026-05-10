@@ -178,4 +178,23 @@ public class Tests
         var result = game.GetScore();
         Assert.Equal("Player1 Wins", result);
     }
+
+    [Fact]
+    public void Exception_when_scoring_after_game_is_finished()
+
+    {
+
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+
+        Assert.Throws<InvalidOperationException>(() =>
+
+        {
+            game.Player1Scores();
+        });
+
+    }
 }

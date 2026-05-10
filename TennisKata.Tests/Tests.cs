@@ -49,4 +49,19 @@ public class Tests
 
         Assert.Equal("Thirty - Fifteen", result);
     }
+
+    [Fact]
+    public void Game_is_Deuce()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        var result = game.GetScore();
+        Assert.Equal("Deuce", result);
+    }
+
 }

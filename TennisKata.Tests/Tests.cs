@@ -164,4 +164,18 @@ public class Tests
         var result = game.GetScore();
         Assert.Equal("Player2 Wins", result);
     }
+
+    [Fact]
+    public void Four_Zero_is_Wins1()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+
+
+        var result = game.GetScore();
+        Assert.Equal("Player1 Wins", result);
+    }
 }

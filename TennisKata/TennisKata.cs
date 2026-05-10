@@ -68,6 +68,10 @@ public class TennisGame
         {
             deuce = true;
         }
+        else if (score1 >= 4 && score1 - score2 >= 2)
+        {
+            winner = 1;
+        }
 
 
     }
@@ -92,6 +96,10 @@ public class TennisGame
         if (score1 == score2 && score1 >= 3)
         {
             deuce = true;
+        }
+        else if (score2 >= 4 && score2 - score1 >= 2)
+        {
+            winner = 2;
         }
     }
 }

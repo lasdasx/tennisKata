@@ -108,4 +108,60 @@ public class Tests
         Assert.Equal("Player1 Wins", result);
     }
 
+    [Fact]
+    public void Six_Six_is_Deuce()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+
+        game.Player2Scores();
+        var result = game.GetScore();
+        Assert.Equal("Deuce", result);
+    }
+    [Fact]
+    public void Six_Seven_is_Advantage2()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+
+        var result = game.GetScore();
+        Assert.Equal("Player2 Advantage", result);
+    }
+    [Fact]
+    public void Six_Eight_is_Wins2()
+    {
+        var game = new TennisGame();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player1Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        game.Player2Scores();
+        var result = game.GetScore();
+        Assert.Equal("Player2 Wins", result);
+    }
 }

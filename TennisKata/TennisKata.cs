@@ -35,10 +35,7 @@ public class TennisGame
         if (score1 == score2 && (score1 == 0))
         {
 
-
             return "Love All";
-
-
 
         }
 

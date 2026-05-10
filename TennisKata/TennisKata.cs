@@ -32,12 +32,7 @@ public class TennisGame
             { 2, "Thirty" },
             { 3, "Forty" }
         };
-        if (score1 == score2 && (score1 == 0))
-        {
 
-            return "Love All";
-
-        }
 
         return $"{pairs.GetValueOrDefault(score1, "Love")} - {pairs.GetValueOrDefault(score2, "Love")}";
 

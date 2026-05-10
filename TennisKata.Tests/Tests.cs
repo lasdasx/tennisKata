@@ -9,7 +9,7 @@ public class Tests
 
         var result = game.GetScore();
 
-        Assert.Equal("Love All", result);
+        Assert.Equal("Love - Love", result);
     }
 
     [Fact]
@@ -197,4 +197,5 @@ public class Tests
         });
 
     }
+
 }

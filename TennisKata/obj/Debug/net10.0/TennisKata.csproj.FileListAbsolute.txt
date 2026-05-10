@@ -1,0 +1,12 @@
+/home/christos/tennisKata/TennisKata/bin/Debug/net10.0/TennisKata.deps.json
+/home/christos/tennisKata/TennisKata/bin/Debug/net10.0/TennisKata.dll
+/home/christos/tennisKata/TennisKata/bin/Debug/net10.0/TennisKata.pdb
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.GeneratedMSBuildEditorConfig.editorconfig
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.AssemblyInfoInputs.cache
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.AssemblyInfo.cs
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.csproj.CoreCompileInputs.cache
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.sourcelink.json
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.dll
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/refint/TennisKata.dll
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/TennisKata.pdb
+/home/christos/tennisKata/TennisKata/obj/Debug/net10.0/ref/TennisKata.dll

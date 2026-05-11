@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TennisKata.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de315af10505f88dc7416a0301e67cfaa65fb25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f0164b3e6dc42d75faa8b0e76a34026dbc2492c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TennisKata.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TennisKata.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
